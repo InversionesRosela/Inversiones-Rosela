@@ -271,6 +271,10 @@ header .texto h2 {
     font-weight: bold;
 }
 
+.contenedor li:hover {
+    background-color: white;
+    color: #C53A29;
+}
 .contenedor img {
     width: 350px;
     margin: 25px 50px 25px 50px;
