@@ -5,6 +5,10 @@
     font-family: Georgia;
 }
 
+body {
+    background: linear-gradient(141deg, #CECC4C 50%, #2E784D 99%);
+}
+
 header {
     display: flex;
     align-items: center;
@@ -100,10 +104,15 @@ header .texto h2 {
 
     .abrir-menu {
         color: white;
+        font-size: 2rem;
+        font-weight: bold;
     }
 
     .cerrar-menu {
         color: #ececec;
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1.5;
     }
 
     .nav {
@@ -121,6 +130,7 @@ header .texto h2 {
         padding: 1rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
         z-index: 2;
+        height: 160%;
     }
 
     .nav.visible {
@@ -135,20 +145,71 @@ header .texto h2 {
 
     .nav-list li a {
         color: #ecececec;
+        font-weight: bold;
+        line-height: 3rem;
     }
 
-    main .contenedor .logo2 {
-        width: 80px;
-        height: 80px;
-        margin-right: 15px;
+    main .contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
     main .contenedor h1 {
-        font-size: 30px;
+        font-size: 1.5rem;
+        padding: 8px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        text-align: center;
+        background-color: white;
+        color: #C53A29;
     }
 
+    main .contenedor img {
+        width: 200px;
+        margin: 10px;
+    }
+    
     main .contenedor p {
-        font-size: 16px;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        text-align: center;
+        margin: 50px auto;
+    }
+
+    main .contenedor ul {
+        margin: 50px auto;
+        padding: 0;
+        display: block;
+        text-align: center;
+        list-style-type: none;
+    }
+
+    main .contenedor li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        text-align: center;
+        margin: 30px auto;
+    }
+
+    main .roundbtn {
+        width: 3rem;
+        height: 3rem; 
+        line-height: 3rem; 
+    }
+
+    main .roundbtn img {
+        width: 60%;
+        height: 60%;
+    }
+
+    main .btn-text {
+        font-size: 1rem;
+        padding: 0.25rem;
+        border-radius: 2.5rem;
+        background-color: #4caf4f;
     }
 }
 
@@ -172,15 +233,21 @@ header .texto h2 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     font-size: 2rem;
+    animation-duration: 1s;
+    animation-name: slidein;
 }
 
 .contenedor p {
-    color: #75251a;
+    color: white;
     border-radius: 15px;
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
     font-size: 2rem;
+    animation-duration: 1s;
+    animation-name: slidein;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #75251a;
 }
 
 .contenedor ul {
@@ -191,6 +258,8 @@ header .texto h2 {
     align-items: center;
     letter-spacing: 2px;
     gap: 5rem;
+    animation-duration: 1s;
+    animation-name: slidein;
 }
 
 .contenedor li {
@@ -198,15 +267,149 @@ header .texto h2 {
     border-radius: 15px;
     padding: 15px;
     color: white;
-    font-size: 2rem;
-    
+    font-size: 1.7rem;
+    font-weight: bold;
 }
+
 .contenedor img {
     width: 350px;
     margin: 25px 50px 25px 50px;
-    border-radius: 360px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    animation: aparecerizq 1s forwards;
 }
+
+/*Botón del contacto*/
+.roundbtn {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    z-index: 9999;
+    width: 4rem;
+    height: 4rem;
+    background-color: 4caf4f;
+    color: white;
+    text-align: center;
+    line-height: 4rem;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #000;
+    cursor: pointer;
+    border: 2px solid #4caf4f;
+    transition: 0.5s all ease-in-out;
+}
+
+.roundbtn img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.roundbtn:hover .btn-text {
+    display: block;
+}
+
+.btn-text {
+    display: none;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-110%);
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px black;
+    letter-spacing: 2px;
+    padding: 0.5rem;
+    border-radius: 5rem;
+    background-color: #4caf4f88;
+}
+
+.roundbtn:hover .btn-text {
+    display: block;
+}
+
+.texto-animado {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.texto-animado span {
+    display: inline-block;
+    opacity: 0;
+    animation: aparecer 1s forwards;
+}
+
+/*Animaciones*/
+@keyframes slidein {
+    from {
+        transform: translateX(5%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.texto-animado span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.texto-animado span:nth-child(2) {
+    animation-delay: 0s;
+}
+
+.texto-animado span:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+.texto-animado span:nth-child(4) {
+    animation-delay: 0.1s;
+}
+
+.texto-animado span:nth-child(5) {
+    animation-delay: 0.2s;
+}
+
+.texto-animado span:nth-child(6) {
+    animation-delay: 0.2s;
+}
+
+.texto-animado span:nth-child(7) {
+    animation-delay: 0.3s;
+}
+
+.texto-animado span:nth-child(8) {
+    animation-delay: 0.3s;
+}
+
+.texto-animado span:nth-child(9) {
+    animation-delay: 0.4s;
+}
+
+.texto-animado span:nth-child(10) {
+    animation-delay: 0.4s;
+}
+
+.texto-animado span:nth-child(11) {
+    animation-delay: 0.5s;
+}
+
+.texto-animado span:nth-child(12) {
+    animation-delay: 0.5s;
+}
+
 
 /*Pie de la página*/
 footer {
@@ -220,13 +423,13 @@ footer {
     height: 60px;
     text-align: center;
     line-height: 60px;
-  }
-  
-  footer a {
+}
+
+footer a {
     color: white;
     text-decoration: none;
-  }
-  
-  footer a:hover {
+}
+
+footer a:hover {
     text-decoration: underline;
-  }
+}
