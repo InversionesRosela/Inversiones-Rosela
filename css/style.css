@@ -84,135 +84,6 @@ header .texto h2 {
     display: none;
 }
 
-/*Tamaño de celular*/
-@media screen and (max-width: 550px) {
-
-    header .info {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .abrir-menu,
-    .cerrar-menu {
-        display: block;
-        border: 0;
-        font-size: 1.25rem;
-        background-color: transparent;
-        cursor: pointer;
-    }
-
-    .abrir-menu {
-        color: white;
-        font-size: 2rem;
-        font-weight: bold;
-    }
-
-    .cerrar-menu {
-        color: #ececec;
-        font-size: 3rem;
-        font-weight: bold;
-        line-height: 1.5;
-    }
-
-    .nav {
-        opacity: 0;
-        visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 1rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #75251a;
-        padding: 1rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-        z-index: 2;
-        height: 160%;
-    }
-
-    .nav.visible {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        align-items: end;
-    }
-
-    .nav-list li a {
-        color: #ecececec;
-        font-weight: bold;
-        line-height: 3rem;
-    }
-
-    main .contenedor {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    main .contenedor h1 {
-        font-size: 1.5rem;
-        padding: 8px;
-        border-radius: 8px;
-        margin-bottom: 10px;
-        text-align: center;
-        background-color: white;
-        color: #C53A29;
-    }
-
-    main .contenedor img {
-        width: 200px;
-        margin: 10px;
-    }
-    
-    main .contenedor p {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        text-align: center;
-        margin: 50px auto;
-    }
-
-    main .contenedor ul {
-        margin: 50px auto;
-        padding: 0;
-        display: block;
-        text-align: center;
-        list-style-type: none;
-    }
-
-    main .contenedor li {
-        font-size: 1rem;
-        margin-bottom: 10px;
-        text-align: center;
-        margin: 30px auto;
-    }
-
-    main .roundbtn {
-        width: 3rem;
-        height: 3rem; 
-        line-height: 3rem; 
-    }
-
-    main .roundbtn img {
-        width: 60%;
-        height: 60%;
-    }
-
-    main .btn-text {
-        font-size: 1rem;
-        padding: 0.25rem;
-        border-radius: 2.5rem;
-        background-color: #4caf4f;
-    }
-}
-
 /*El contenedor del index*/
 .contenedor {
     display: flex;
@@ -275,6 +146,7 @@ header .texto h2 {
     background-color: white;
     color: #C53A29;
 }
+
 .contenedor img {
     width: 350px;
     margin: 25px 50px 25px 50px;
@@ -286,7 +158,6 @@ header .texto h2 {
     position: fixed;
     bottom: 70px;
     right: 20px;
-    z-index: 9999;
     width: 4rem;
     height: 4rem;
     background-color: #4caf4f;
@@ -446,4 +317,366 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/*Tamaño de celular*/
+@media screen and (max-width: 720px) {
+
+    header .info {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #75251a;
+        padding: 1rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        z-index: 5;
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #ecececec;
+        font-weight: bold;
+        line-height: 3rem;
+    }
+
+    main .contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    main .contenedor h1 {
+        font-size: 1.5rem;
+        padding: 8px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        text-align: center;
+        background-color: white;
+        color: #C53A29;
+    }
+
+    main .contenedor img {
+        width: 200px;
+        margin: 10px;
+    }
+
+    main .contenedor p {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        text-align: center;
+        margin: 50px auto;
+    }
+
+    main .contenedor ul {
+        margin: 50px auto;
+        padding: 0;
+        display: block;
+        text-align: center;
+        list-style-type: none;
+    }
+
+    main .contenedor li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        text-align: center;
+        margin: 30px auto;
+    }
+
+    main .roundbtn {
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        z-index: 2;
+    }
+
+    main .roundbtn img {
+        width: 60%;
+        height: 60%;
+    }
+
+    main .btn-text {
+        font-size: 1rem;
+        padding: 0.25rem;
+        border-radius: 2.5rem;
+        background-color: #4caf4f;
+    }
+}
+
+/*Tamaño tablet*/
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+    header .info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    header .info img {
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+    }
+
+    header .texto h1,
+    header .texto h2 {
+        margin-bottom: 0.5rem;
+        font-size: 3rem;
+    }
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 20rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
+        font-size: 5rem;
+        font-weight: bold;
+        line-height: 3;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #75251a;
+        padding: 5rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        z-index: 5;
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #ecececec;
+        font-weight: bold;
+        line-height: 5rem;
+        font-size: 3rem;
+    }
+
+    main .contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    main .contenedor h1 {
+        font-size: 4rem;
+        padding: 8px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        text-align: center;
+        background-color: white;
+        color: #C53A29;
+    }
+
+    main .contenedor img {
+        width: 200px;
+        margin: 10px;
+    }
+
+    main .contenedor p {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-align: center;
+        margin: 50px auto;
+    }
+
+    main .contenedor ul {
+        margin: 50px auto;
+        padding: 0;
+        display: block;
+        text-align: center;
+        list-style-type: none;
+    }
+
+    main .contenedor li {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-align: center;
+        margin: 30px auto;
+    }
+
+    main .roundbtn {
+        width: 6rem;
+        height: 6rem;
+        line-height: 3rem;
+        z-index: 2;
+    }
+
+    main .roundbtn img {
+        width: 60%;
+        height: 60%;
+    }
+
+    main .btn-text {
+        font-size: 3rem;
+        padding: 2rem;
+        border-radius: 2.5rem;
+        background-color: #4caf4f;
+    }
+
+    footer {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header .info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    header .info img {
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+    }
+
+    header .texto h1,
+    header .texto h2 {
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+    }
+
+    main .contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    main .contenedor h1 {
+        font-size: 4rem;
+        padding: 8px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        text-align: center;
+        background-color: white;
+        color: #C53A29;
+    }
+
+    main .contenedor img {
+        width: 200px;
+        margin: 10px;
+    }
+
+    main .contenedor p {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-align: center;
+        margin: 50px auto;
+    }
+
+    main .contenedor ul {
+        margin: 50px auto;
+        padding: 0;
+        display: block;
+        text-align: center;
+        list-style-type: none;
+    }
+
+    main .contenedor li {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-align: center;
+        margin: 30px auto;
+    }
+
+    main .roundbtn {
+        width: 6rem;
+        height: 6rem;
+        line-height: 3rem;
+        z-index: 2;
+    }
+
+    main .roundbtn img {
+        width: 60%;
+        height: 60%;
+    }
+
+    main .btn-text {
+        font-size: 3rem;
+        padding: 2rem;
+        border-radius: 2.5rem;
+        background-color: #4caf4f;
+    }
+
+    footer {
+        font-size: 2rem;
+    }
 }
