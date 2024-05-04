@@ -84,6 +84,40 @@ header .texto h2 {
     display: none;
 }
 
+/*Submenu*/
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 10;
+    border-top: 2px solid #C53A29;
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.nav-list li:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    color: #C53A29;
+    text-decoration: none;
+    padding: 8px 20px;
+    display: block;
+    margin-bottom: 10px; 
+    font-size: 1.2rem;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+.submenu li a:hover {
+    background-color: #C53A29;
+    color: white;
+    transform: scale(1.1);
+}
+
 /*El contenedor del index*/
 .contenedor {
     display: flex;
@@ -154,6 +188,74 @@ header .texto h2 {
     animation: aparecerizq 1s forwards;
 }
 
+/*Apartado de productos*/
+.ventasCards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 90vw;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .ventastitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    flex: 1;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .ventastitulo h1 {
+    font-size: 2.5rem;
+    color: #333;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .card h3 {
+    font-size: 28px;
+    color: #333333;
+    margin: 15px 0;
+    text-align: center;
+  }
+  
+  .card p {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+
 /*Botón del contacto*/
 .roundbtn {
     position: fixed;
@@ -170,6 +272,7 @@ header .texto h2 {
     cursor: pointer;
     border: 2px solid #4caf4f;
     transition: 0.5s all ease-in-out;
+    z-index: 1;
 }
 
 .roundbtn:hover {
@@ -178,9 +281,9 @@ header .texto h2 {
 }
 
 .roundbtn img {
-    width: 70%;
-    height: 70%;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     transition: filter 0.5s ease-in-out;
 }
 
@@ -221,6 +324,37 @@ header .texto h2 {
     display: inline-block;
     opacity: 0;
     animation: aparecer 1s forwards;
+}
+
+.contactos {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 10px);
+    right: 90%;
+    transform: translateX(25%);
+    background-color: #3b853e;
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    width: 400%;
+}
+
+.contactos a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+.contactos a:hover {
+    background-color: white;
+    color: #3b853e;
+}
+
+.roundbtn.open .contactos {
+    display: block;
 }
 
 /*Animaciones*/
@@ -307,6 +441,7 @@ footer {
     left: 0;
     right: 0;
     height: 60px;
+    bottom: 0;
     text-align: center;
     line-height: 60px;
 }
