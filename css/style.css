@@ -88,6 +88,10 @@ header .texto h2 {
     font-size: 1.5rem;
 }
 
+.nav-list li {
+    position: relative; 
+}
+
 .nav-list li a {
     color: white;
     text-decoration: none;
@@ -214,7 +218,7 @@ header .texto h2 {
 
 .container {
     display: flex;
-    justify-content: space-around; /* Distribuye los elementos horizontalmente */
+    justify-content: space-around;
     align-items: center;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -230,7 +234,7 @@ header .texto h2 {
 }
 
 .acerca > * {
-    margin: 20px 0; /* Espacio entre elementos */
+    margin: 20px 0;
 }
 
 .acerca div {
@@ -247,7 +251,7 @@ header .texto h2 {
     color: white;
     border-radius: 15px;
     padding: 20px;
-    margin: 0 auto; /* Centra el título horizontalmente */
+    margin: 0 auto;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     font-size: 2rem;
@@ -279,7 +283,7 @@ header .texto h2 {
 .acerca img {
     width: 350px;
     height: 525px;
-    margin: 25px 0; /* Espacio uniforme en la parte superior e inferior */
+    margin: 25px 0;
     animation: aparecerizq 1s forwards;
     background-color: lightblue;
     border-radius: 50%;
@@ -555,8 +559,7 @@ footer a:hover {
 
 /*Tamaño de celular*/
 @media screen and (max-width: 720px) {
-
-    header .info {
+header .info {
         flex-direction: column;
         align-items: center;
         margin-bottom: 20px;
@@ -566,22 +569,15 @@ footer a:hover {
     .cerrar-menu {
         display: block;
         border: 0;
-        font-size: 1.25rem;
+        font-size: 3rem;
         background-color: transparent;
         cursor: pointer;
+        color: #fff; /* Color para el icono */
     }
-
-    .abrir-menu {
-        color: white;
-        font-size: 2rem;
-        font-weight: bold;
-    }
-
-    .cerrar-menu {
-        color: #ececec;
-        font-size: 3rem;
-        font-weight: bold;
-        line-height: 1.5;
+    
+    .abrir-menu:hover,
+    .cerrar-menu:hover {
+        color: #C53A29; /* Cambiar color al hacer hover */
     }
 
     .nav {
@@ -609,12 +605,29 @@ footer a:hover {
     .nav-list {
         flex-direction: column;
         align-items: end;
+        list-style-type: none;
     }
 
     .nav-list li a {
         color: #ecececec;
         font-weight: bold;
         line-height: 3rem;
+    }
+
+    .nav-list li {
+        position: relative;
+    }
+
+    .nav-list li:after {
+        content: "\25BC";
+        position: absolute;
+        top: 50%;
+        right: 0.5rem;
+        transform: translateY(-50%);
+    }
+
+    body.nav-open {
+        overflow: hidden;
     }
 
     main .contenedor {
@@ -660,6 +673,33 @@ footer a:hover {
         margin-bottom: 10px;
         text-align: center;
         margin: 30px auto;
+    }
+
+    .acerca {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .acerca h1 {
+        margin: 20px auto 10px;
+    }
+
+    .acerca h2 {
+        font-size: 2.5rem;
+    }
+
+    .acerca img {
+        width: 250px;
+        height: auto;
+        margin: 15px auto;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .acerca {
+        margin: 0 auto;
     }
 
     main .roundbtn {
@@ -755,6 +795,7 @@ footer a:hover {
     .nav-list {
         flex-direction: column;
         align-items: end;
+        list-style-type: none;
     }
 
     .nav-list li a {
