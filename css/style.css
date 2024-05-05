@@ -133,6 +133,7 @@ header .texto h2 {
 }
 
 /*El contenedor del index*/
+
 .contenedor {
     display: flex;
     justify-content: left;
@@ -184,7 +185,7 @@ header .texto h2 {
 .contenedor li {
     background-color: #C53A29;
     border-radius: 50px;
-    padding: 15px;
+    padding: 25px;
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
@@ -202,7 +203,90 @@ header .texto h2 {
     animation: aparecerizq 1s forwards;
 }
 
+.acerca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos horizontalmente */
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.acerca {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+.acerca > * {
+    margin: 20px 0; /* Espacio entre elementos */
+}
+
+.acerca div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+.acerca h1 {
+    background-color: #C53A29;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 auto; /* Centra el título horizontalmente */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 2rem;
+    animation-duration: 1s;
+    animation-name: slidein;
+    width: fit-content;
+}
+
+.acerca h2,
+.acerca h3,
+.acerca a {
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    animation-duration: 1s;
+    animation-name: slidein;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+    text-decoration: none;
+}
+
+.acerca h2 {
+    font-size: 3rem;
+    background-color: lightblue;
+}
+
+.acerca img {
+    width: 350px;
+    height: 525px;
+    margin: 25px 0; /* Espacio uniforme en la parte superior e inferior */
+    animation: aparecerizq 1s forwards;
+    background-color: lightblue;
+    border-radius: 50%;
+}
+
 /*Apartado de productos*/
+
 .ventasCards {
     display: flex;
     flex-wrap: wrap;
@@ -213,6 +297,7 @@ header .texto h2 {
 }
 
 /* Estilos para el contenedor del título de ventas */
+
 .ventastitulo {
     display: flex;
     justify-content: center;
