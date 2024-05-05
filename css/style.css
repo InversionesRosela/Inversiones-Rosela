@@ -354,7 +354,12 @@ header .texto h2 {
     display: block;
     color: white;
     text-decoration: none;
-    padding: 8px 15px;
+    padding: 10px 15px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.contactos a:last-child {
+    border-bottom: none;
 }
 
 .contactos a:hover {
@@ -581,8 +586,8 @@ footer a:hover {
     }
 
     main .roundbtn img {
-        width: 60%;
-        height: 60%;
+        width: 100%;
+        height: 100%;
     }
 
     main .btn-text {
@@ -590,6 +595,12 @@ footer a:hover {
         padding: 0.25rem;
         border-radius: 2.5rem;
         background-color: #4caf4f;
+    }
+
+    main .contactos {
+        bottom: calc(100% + 10px);
+        transform: translateX(20%);
+        width: 500%;
     }
 }
 
