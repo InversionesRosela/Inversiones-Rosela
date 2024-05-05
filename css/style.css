@@ -217,7 +217,6 @@ header .texto h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px 0;
     flex: 1;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
@@ -228,7 +227,7 @@ header .texto h2 {
 
 .ventastitulo h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #C53A29;
     letter-spacing: 2px;
     margin: 0;
     padding: 0;
@@ -455,7 +454,7 @@ footer {
     left: 0;
     right: 0;
     height: 60px;
-    bottom: -70px;
+    bottom: -60px;
     text-align: center;
     line-height: 60px;
 }
