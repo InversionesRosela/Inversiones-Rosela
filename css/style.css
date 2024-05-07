@@ -587,6 +587,7 @@ footer a:hover {
         gap: 1rem;
         position: absolute;
         top: 0;
+        position: fixed;
         right: 0;
         bottom: 0;
         background-color: #75251a;
