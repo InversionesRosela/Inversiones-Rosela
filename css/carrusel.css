@@ -62,6 +62,9 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 15px;
 }
 
 .carusel .caruseltrack .caruselItem h3 {
@@ -70,6 +73,9 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     font-size: 5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 15px;
 }
 
 .carusel .caruseltrack .caruselItem p {
@@ -78,10 +84,10 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     font-size: 5rem;
-    text-shadow:
-        0 0 20px rgba(0, 0, 0, 0.8),
-        5px 5px 15px rgba(0, 0, 0, 0.8);
     font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 15px;
 }
 
 .carusel .navigator {
@@ -108,24 +114,43 @@
     cursor: pointer;
 }
 
-@media (min-width:721px) {
+@media (max-width: 720px) {
     .carusel {
-        height: 680px;
+        height: 400px;
     }
 
     .carusel .caruseltrack .caruselItem img {
-        min-height: 680px;
+        min-height: 400px;
     }
 
     .carusel .caruseltrack .caruselItem h2 {
-        font-size: 5rem;
+        font-size: 3rem;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
     }
 
     .carusel .caruseltrack .caruselItem h3 {
-        font-size: 3rem;
+        font-size: 1.5rem;
+        text-align: center;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
     }
 
     .carusel .caruseltrack .caruselItem p {
-        font-size: 5rem;
+        font-size: 2rem;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .carusel .navigator .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0px 1rem;
+
     }
 }

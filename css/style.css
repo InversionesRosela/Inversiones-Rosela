@@ -17,6 +17,7 @@ header {
     background-color: #C53A29;
 }
 
+
 /*Fondo de imagenes*/
 
 .ventasCards:before {
@@ -89,7 +90,7 @@ header .texto h2 {
 }
 
 .nav-list li {
-    position: relative; 
+    position: relative;
 }
 
 .nav-list li a {
@@ -207,14 +208,6 @@ header .texto h2 {
     animation: aparecerizq 1s forwards;
 }
 
-.acerca {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
 
 .container {
     display: flex;
@@ -224,16 +217,20 @@ header .texto h2 {
     margin-bottom: 25px;
 }
 
+/*Acerca de nosotros*/
+
 .acerca {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 25px;
     animation-duration: 1s;
     animation-name: slidein;
 }
 
-.acerca > * {
+.acerca>* {
     margin: 20px 0;
 }
 
@@ -252,9 +249,10 @@ header .texto h2 {
     border-radius: 15px;
     padding: 20px;
     margin: 0 auto;
+    margin-top: 100px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-size: 2rem;
+    font-size: 7em;
     animation-duration: 1s;
     animation-name: slidein;
     width: fit-content;
@@ -267,7 +265,7 @@ header .texto h2 {
     border-radius: 15px;
     padding: 20px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     animation-duration: 1s;
     animation-name: slidein;
     font-weight: bold;
@@ -276,13 +274,13 @@ header .texto h2 {
 }
 
 .acerca h2 {
-    font-size: 3rem;
+    font-size: 5rem;
     background-color: lightblue;
 }
 
 .acerca img {
-    width: 350px;
-    height: 525px;
+    width: 450px;
+    height: 675px;
     margin: 25px 0;
     animation: aparecerizq 1s forwards;
     background-color: lightblue;
@@ -559,7 +557,7 @@ footer a:hover {
 
 /*Tamaño de celular*/
 @media screen and (max-width: 720px) {
-header .info {
+    header .info {
         flex-direction: column;
         align-items: center;
         margin-bottom: 20px;
@@ -572,12 +570,12 @@ header .info {
         font-size: 3rem;
         background-color: transparent;
         cursor: pointer;
-        color: #fff; /* Color para el icono */
+        color: #fff;
     }
-    
+
     .abrir-menu:hover,
     .cerrar-menu:hover {
-        color: #C53A29; /* Cambiar color al hacer hover */
+        color: transparent;
     }
 
     .nav {
@@ -595,11 +593,29 @@ header .info {
         padding: 1rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
         z-index: 5;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
     }
 
     .nav.visible {
         opacity: 1;
         visibility: visible;
+        transform: translateX(0);
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 4;
     }
 
     .nav-list {
@@ -616,14 +632,6 @@ header .info {
 
     .nav-list li {
         position: relative;
-    }
-
-    .nav-list li:after {
-        content: "\25BC";
-        position: absolute;
-        top: 50%;
-        right: 0.5rem;
-        transform: translateY(-50%);
     }
 
     body.nav-open {
@@ -682,11 +690,21 @@ header .info {
 
     .acerca h1 {
         margin: 20px auto 10px;
+        font-size: 1.5rem;
     }
 
     .acerca h2 {
         font-size: 2.5rem;
     }
+
+    .acerca h3 {
+        font-size: 2rem;
+    }
+
+    .acerca a {
+        font-size: 1.5rem;
+    }
+
 
     .acerca img {
         width: 250px;
@@ -701,6 +719,56 @@ header .info {
     .acerca {
         margin: 0 auto;
     }
+
+    /*Ventas @media*/
+
+    .ventastitulo h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /*Productos*/
+    .card {
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .ventasCards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px auto;
+        max-width: 90vw;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .card h3 {
+        font-size: 28px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0);
+        background-color: rgba(197, 59, 41, 0.6);
+        margin: 0;
+        padding: 10px;
+    }
+
+    /*Contacto botón @media*/
 
     main .roundbtn {
         width: 3rem;
@@ -943,6 +1011,9 @@ header .info {
         text-align: center;
         margin: 30px auto;
     }
+
+
+    /*Contactos @ media*/
 
     main .roundbtn {
         width: 7rem;

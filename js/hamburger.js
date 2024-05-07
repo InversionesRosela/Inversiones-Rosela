@@ -1,19 +1,21 @@
-const nav = document.querySelector("#nav");
-const abrir = document.querySelector("#abrir");
-const cerrar = document.querySelector("#cerrar");
-const overlay = document.querySelector("#overlay");
+document.addEventListener("DOMContentLoaded", function() {
+    var abrirMenu = document.getElementById('abrir');
+    var cerrarMenu = document.getElementById('cerrar');
+    var nav = document.getElementById('nav');
+    var overlay = document.getElementById('overlay');
 
-abrir.addEventListener("click", () => {
-    nav.classList.add("visible");
-    document.body.classList.add("abrir-menu");
-});
+    abrirMenu.addEventListener('click', function() {
+        nav.classList.add('visible');
+        overlay.style.display = "block";
+    });
 
-cerrar.addEventListener("click", () => {
-    nav.classList.remove("visible");
-    document.body.classList.remove("abrir-menu");
-});
+    cerrarMenu.addEventListener('click', function() {
+        nav.classList.remove('visible');
+        overlay.style.display = "none";
+    });
 
-overlay.addEventListener("click", () => {
-    nav.classList.remove("visible");
-    document.body.classList.remove("abrir-menu");
+    overlay.addEventListener('click', function() {
+        nav.classList.remove('visible');
+        overlay.style.display = "none";
+    });
 });
