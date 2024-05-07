@@ -69,10 +69,10 @@
 
 .carusel .caruseltrack .caruselItem h3 {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 5rem;
+    font-size: 3rem;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px;
     border-radius: 15px;
@@ -80,10 +80,10 @@
 
 .carusel .caruseltrack .caruselItem p {
     position: absolute;
-    top: 75%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px;
