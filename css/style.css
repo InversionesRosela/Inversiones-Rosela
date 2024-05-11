@@ -610,6 +610,40 @@ form #btnenviar:hover {
     display: block;
 }
 
+/*Botón de medicamentos*/
+.medicamento {
+    position: fixed;
+    bottom: 70px;
+    left: 20px;
+    width: 4rem;
+    height: 4rem;
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+    line-height: 4rem;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #000;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: 0.5s all ease-in-out;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.medicamento:hover {
+    background-color: white;
+    color: #4caf4f;
+}
+
+.medicamento img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    transition: filter 0.5s ease-in-out;
+}
+
 /*Botón de home*/
 .home {
     position: fixed;
@@ -1005,6 +1039,25 @@ footer a:hover {
     main .roundbtn img {
         width: 100%;
         height: 100%;
+    }
+
+    main .medicamento {
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        z-index: 2;
+    }
+
+    main .medicamento img {
+        width: 60%;
+        height: 60%;
+    }
+
+    main .btn-text {
+        font-size: 1rem;
+        padding: 0.25rem;
+        border-radius: 2.5rem;
+        background-color: #4caf4f;
     }
 
     main .btn-text {
